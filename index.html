@@ -23,6 +23,13 @@
 <meta property="og:image" content="https://versoagora.it/images/castri.jpeg">
 <meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="Verso l'Agorà APS">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Associazione Verso l'Agorà APS">
+<meta name="twitter:description" content="Una comunità che cresce insieme, valorizzando ogni stagione della vita nel cuore del Salento.">
+<meta name="twitter:image" content="https://versoagora.it/images/castri.jpeg">
 <!-- Icons -->
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -629,12 +636,39 @@ footer {
   .photo-strip { height: 160px; }
 }
 </style>
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Verso l'Agorà APS",
+  "alternateName": "Associazione Verso l'Agorà",
+  "url": "https://versoagora.it",
+  "logo": "https://versoagora.it/images/slide1_img0_6955769x5269522.jpg",
+  "image": "https://versoagora.it/images/castri.jpeg",
+  "description": "Associazione di promozione sociale a Castrì di Lecce che valorizza ogni stagione della vita attraverso programmi culturali, civici e di socializzazione intergenerazionale.",
+  "email": "info@versolagora.it",
+  "foundingDate": "2023",
+  "areaServed": {
+    "@type": "Place",
+    "name": "Castrì di Lecce, Puglia, Italia"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Castrì di Lecce",
+    "addressRegion": "Puglia",
+    "addressCountry": "IT"
+  },
+  "sameAs": []
+}
+</script>
 </head>
 <body>
 
 <a href="#chi-siamo" class="skip-link">Vai al contenuto</a>
 
 <!-- Navigation -->
+<header>
 <nav id="navbar" class="hero-nav">
   <a href="#hero" class="nav-brand">
     <img src="images/slide1_img0_6955769x5269522.jpg" alt="Logo Verso l'Agorà">
@@ -652,6 +686,7 @@ footer {
     <span></span><span></span><span></span>
   </button>
 </nav>
+</header>
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
@@ -663,6 +698,7 @@ footer {
   <a href="#contatti" onclick="closeMenu()">Contatti</a>
 </div>
 
+<main>
 <!-- Hero -->
 <section class="hero" id="hero">
   <div class="hero-bg"></div>
@@ -987,6 +1023,8 @@ footer {
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- Footer -->
 <footer>
