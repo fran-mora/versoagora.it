@@ -285,7 +285,7 @@ section { padding: 7rem 2rem; position: relative; }
 
 .chi-siamo-hero {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 3rem; align-items: center; margin-bottom: 4rem;
+  gap: 3rem; align-items: start; margin-bottom: 4rem;
 }
 .chi-siamo-hero-text p {
   color: var(--earth-light); font-size: 0.95rem; line-height: 1.85;
@@ -296,7 +296,7 @@ section { padding: 7rem 2rem; position: relative; }
 .chi-siamo-hero-images .img-wrap {
   overflow: hidden; position: relative;
 }
-.chi-siamo-hero-images .img-wrap:first-child { grid-row: 1 / 3; }
+.chi-siamo-hero-images .img-wrap:first-child { grid-column: 1 / -1; max-height: 350px; }
 .chi-siamo-hero-images img {
   width: 100%; height: 100%; object-fit: cover;
   transition: transform 0.6s ease;
@@ -632,7 +632,7 @@ footer {
   .evento-card { grid-template-columns: 1fr; }
   .evento-card img { min-height: 200px; }
   .chi-siamo-hero-images { grid-template-columns: 1fr 1fr; }
-  .chi-siamo-hero-images .img-wrap:first-child { grid-row: auto; }
+  .chi-siamo-hero-images .img-wrap:first-child { grid-column: 1 / -1; max-height: 250px; }
   .photo-strip { height: 160px; }
 }
 </style>
@@ -719,20 +719,17 @@ footer {
 <!-- Chi Siamo -->
 <section class="chi-siamo" id="chi-siamo">
   <div class="section-container">
-    <div class="reveal">
-      <p class="section-label">Chi Siamo</p>
-      <h2 class="section-title">Una nuova visione<br>della <em>comunità</em></h2>
-    </div>
-
-    <!-- Hero images + intro -->
-    <div class="chi-siamo-hero reveal reveal-delay-1">
+    <!-- Hero: left text + right images -->
+    <div class="chi-siamo-hero reveal">
       <div class="chi-siamo-hero-text">
+        <p class="section-label">Chi Siamo</p>
+        <h2 class="section-title">Una nuova visione<br>della <em>comunità</em></h2>
         <p>L'Associazione "Verso l'Agorà" nasce a Castrì di Lecce con un progetto ambizioso: trasformare e adattare la comunità all'invecchiamento della popolazione, rendendo gli anziani protagonisti attivi della vita sociale e culturale del territorio salentino.</p>
         <p style="margin-top:1rem;">Attraverso programmi di crescita culturale, civica e di socializzazione intergenerazionale, valorizziamo le competenze, le esperienze e le attitudini di ogni membro della nostra comunità.</p>
       </div>
       <div class="chi-siamo-hero-images">
         <div class="img-wrap">
-          <img src="images/slide7_img0_2431473x3241964.jpg" alt="Relatore con banner Verso l'Agorà" loading="lazy">
+          <img src="images/membri.jpeg" alt="Membri dell'associazione Verso l'Agorà" loading="lazy">
         </div>
         <div class="img-wrap">
           <img src="images/slide3_group0_img2.jpg" alt="Incontro all'aperto nel Salento" loading="lazy">
