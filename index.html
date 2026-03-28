@@ -12,8 +12,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Associazione Verso l'Agorà APS — Castrì di Lecce</title>
-<meta name="description" content="Verso l'Agorà APS è un'associazione di promozione sociale a Castrì di Lecce che valorizza ogni stagione della vita attraverso programmi culturali, civici e di socializzazione intergenerazionale.">
+<title>Associazione Verso l'Agorà APS — Castri di Lecce</title>
+<meta name="description" content="Verso l'Agorà APS è un'associazione di promozione sociale a Castri di Lecce che valorizza ogni stagione della vita attraverso programmi culturali, civici e di socializzazione intergenerazionale.">
 <link rel="canonical" href="https://versoagora.it/">
 <!-- Open Graph -->
 <meta property="og:title" content="Associazione Verso l'Agorà APS">
@@ -73,6 +73,7 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+img { border-radius: 6px; }
 
 :root {
   --cream: #F5F0E8;
@@ -246,6 +247,15 @@ nav.hero-nav.scrolled .nav-burger span { background: var(--earth); }
   border: 1px solid rgba(255,255,255,0.15); border-radius: 100px;
   opacity: 0; animation: fadeUp 1s 1.2s ease forwards;
 }
+.hero-email {
+  margin-top: 1rem;
+  font-family: 'Jost', sans-serif; font-weight: 300; font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.6);
+  opacity: 0; animation: fadeUp 1s 1.4s ease forwards;
+}
+.hero-email a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s ease; }
+.hero-email a:hover { color: rgba(255,255,255,0.9); }
 .hero-scroll {
   position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
@@ -279,6 +289,114 @@ section { padding: 7rem 2rem; position: relative; }
   line-height: 1.15; color: var(--earth); margin-bottom: 2rem;
 }
 .section-title em { font-style: italic; color: var(--terracotta); }
+
+/* ---------- Prossimi Appuntamenti ---------- */
+.prossimi-appuntamenti {
+  padding: 4rem 2rem 3rem;
+  background: var(--warm-white);
+  position: relative;
+  overflow: hidden;
+}
+.prossimi-appuntamenti::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--stone-light), transparent);
+}
+.prossimi-appuntamenti .section-label {
+  display: flex; align-items: center; justify-content: center; gap: 1rem;
+}
+.prossimi-appuntamenti .section-label::before,
+.prossimi-appuntamenti .section-label::after {
+  content: ''; width: 30px; height: 1px;
+  background: var(--terracotta-light); opacity: 0.5;
+}
+.pulse-dot {
+  display: inline-block; width: 6px; height: 6px;
+  background: var(--terracotta); border-radius: 50%;
+  margin-right: 0.5rem; vertical-align: middle;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.4); }
+}
+.timeline { position: relative; padding-left: 0; }
+.timeline::before {
+  content: ''; position: absolute; left: 140px; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--stone-light) 10%, var(--stone-light) 90%, transparent);
+}
+.timeline-item {
+  display: grid; grid-template-columns: 120px 40px 1fr;
+  gap: 0; margin-bottom: 3rem; position: relative;
+}
+.timeline-date { text-align: right; padding-right: 1.5rem; padding-top: 0.3rem; }
+.timeline-date .day {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600; font-size: 2.8rem; line-height: 1;
+  color: var(--terracotta); display: block;
+}
+.timeline-date .month-year {
+  font-family: 'Jost', sans-serif; font-weight: 300; font-size: 0.7rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--stone-dark); display: block; margin-top: 0.2rem;
+}
+.timeline-node {
+  display: flex; align-items: flex-start; justify-content: center;
+  padding-top: 0.9rem; position: relative;
+}
+.timeline-node::before {
+  content: ''; width: 9px; height: 9px; border-radius: 50%;
+  border: 1.5px solid var(--terracotta); background: var(--warm-white);
+  transition: all 0.3s ease;
+}
+.timeline-item:hover .timeline-node::before {
+  background: var(--terracotta);
+  box-shadow: 0 0 0 4px rgba(196, 106, 71, 0.12);
+}
+.timeline-content {
+  padding-left: 1.5rem; padding-top: 0.2rem;
+  border-top: 1px solid transparent; transition: all 0.4s ease;
+}
+.timeline-item:hover .timeline-content { border-top-color: var(--terracotta-light); }
+.timeline-content h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500; font-size: 1.5rem; line-height: 1.3;
+  color: var(--earth); margin-bottom: 0.5rem; transition: color 0.3s ease;
+}
+.timeline-item:hover .timeline-content h3 { color: var(--terracotta-deep); }
+.timeline-content p {
+  font-size: 0.88rem; line-height: 1.7;
+  color: var(--earth-light); max-width: 520px;
+}
+.timeline-meta {
+  display: flex; gap: 1.5rem; margin-top: 0.8rem;
+  font-family: 'Jost', sans-serif; font-weight: 300;
+  font-size: 0.7rem; letter-spacing: 0.08em; color: var(--stone-dark);
+}
+.timeline-meta span { display: flex; align-items: center; gap: 0.4rem; }
+.timeline-meta svg { width: 13px; height: 13px; opacity: 0.6; }
+.timeline-tag {
+  display: inline-block; font-family: 'Jost', sans-serif; font-weight: 400;
+  font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.2rem 0.7rem; border-radius: 100px; margin-bottom: 0.5rem;
+}
+.timeline-tag.pubblico {
+  background: rgba(196, 106, 71, 0.1); color: var(--terracotta-deep);
+  border: 1px solid rgba(196, 106, 71, 0.2);
+}
+.timeline-tag.soci {
+  background: rgba(107, 127, 86, 0.1); color: var(--olive-dark);
+  border: 1px solid rgba(107, 127, 86, 0.2);
+}
+
+@media (max-width: 768px) {
+  .timeline::before { left: 20px; }
+  .timeline-item { grid-template-columns: 1fr; padding-left: 50px; gap: 0.3rem; }
+  .timeline-date { text-align: left; padding-right: 0; display: flex; align-items: baseline; gap: 0.5rem; }
+  .timeline-date .day { font-size: 1.6rem; }
+  .timeline-node { position: absolute; left: 0; top: 0; width: 40px; justify-content: center; padding-top: 0.5rem; }
+  .timeline-content { padding-left: 0; }
+}
 
 /* ---------- Chi Siamo ---------- */
 .chi-siamo { background: var(--warm-white); }
@@ -339,22 +457,58 @@ section { padding: 7rem 2rem; position: relative; }
 }
 .value-card p { font-size: 0.85rem; color: var(--stone-dark); line-height: 1.7; }
 
+/* ---------- Direttivo ---------- */
+.direttivo { background: var(--warm-white); padding: 4rem 2rem; }
+.direttivo-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 2rem; margin-top: 2rem;
+}
+.direttivo-member {
+  text-align: center; padding: 2rem 1rem;
+  border: 1px solid rgba(61,50,41,0.06);
+  background: var(--cream-light);
+  transition: all 0.3s ease;
+}
+.direttivo-member:hover {
+  border-color: rgba(196,106,71,0.2);
+  box-shadow: 0 4px 20px rgba(61,50,41,0.06);
+}
+.direttivo-member h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500; font-size: 1.3rem; color: var(--earth);
+  margin-bottom: 0.3rem;
+}
+.direttivo-member span {
+  font-family: 'Jost', sans-serif; font-weight: 300;
+  font-size: 0.75rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--terracotta);
+}
+
 /* ---------- Photo strip ---------- */
 .photo-strip {
   padding: 0; overflow: hidden; background: var(--earth);
-  display: flex; height: 280px;
+  height: 280px;
 }
-.photo-strip img {
+.photo-strip-track {
+  display: flex; height: 100%;
+  animation: photoScroll 30s linear infinite;
+  width: max-content;
+}
+.photo-strip-track img {
   height: 100%; width: auto; object-fit: cover;
   flex-shrink: 0;
   filter: grayscale(20%);
-  transition: filter 0.4s ease, flex-grow 0.4s ease;
-  flex-grow: 1;
-  min-width: 0;
+  transition: filter 0.4s ease;
 }
-.photo-strip img:hover {
+.photo-strip-track img:hover {
   filter: grayscale(0%);
-  flex-grow: 1.8;
+}
+.photo-strip:hover .photo-strip-track {
+  animation-play-state: paused;
+}
+@keyframes photoScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ---------- Attività ---------- */
@@ -363,8 +517,16 @@ section { padding: 7rem 2rem; position: relative; }
   max-width: 620px; margin-bottom: 3rem;
   color: var(--earth-light); font-size: 0.95rem; line-height: 1.85;
 }
+.attivita-group { margin-bottom: 3rem; }
+.attivita-group:last-child { margin-bottom: 0; }
+.attivita-group-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400; font-size: 1.4rem; font-style: italic;
+  color: var(--terracotta); margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem; border-bottom: 1px solid rgba(61,50,41,0.08);
+}
 .attivita-grid {
-  display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem;
+  display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem;
 }
 .attivita-card {
   background: var(--warm-white); border: 1px solid rgba(61,50,41,0.06);
@@ -404,7 +566,7 @@ section { padding: 7rem 2rem; position: relative; }
 
 /* ---------- Programmi ---------- */
 .programmi {
-  background: var(--earth); color: var(--cream); position: relative; overflow: hidden;
+  background: var(--cream); color: var(--earth); position: relative; overflow: hidden;
 }
 .programmi::before {
   content: ''; position: absolute; inset: 0;
@@ -413,9 +575,9 @@ section { padding: 7rem 2rem; position: relative; }
     radial-gradient(ellipse 60% 60% at 10% 10%, rgba(107,127,86,0.06) 0%, transparent 70%);
   pointer-events: none;
 }
-.programmi .section-label { color: var(--gold-light); }
-.programmi .section-title { color: var(--cream); }
-.programmi .section-title em { color: var(--terracotta-light); }
+.programmi .section-label { color: var(--terracotta); }
+.programmi .section-title { color: var(--earth); }
+.programmi .section-title em { color: var(--terracotta); }
 
 .programmi-timeline {
   margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr;
@@ -423,20 +585,21 @@ section { padding: 7rem 2rem; position: relative; }
 }
 .programmi-col h3 {
   font-family: 'Jost', sans-serif; font-weight: 400; font-size: 0.75rem;
-  letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--olive);
   margin-bottom: 1.8rem; display: flex; align-items: center; gap: 0.8rem;
 }
-.programmi-col h3::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
+.programmi-col h3::before { content: ''; width: 24px; height: 1px; background: var(--olive); }
+.programmi-col { display: grid; grid-template-rows: auto 1fr 1fr; }
 .programmi-item {
-  padding: 1.8rem; border: 1px solid rgba(245,240,232,0.08);
+  padding: 1.8rem; border: 1px solid rgba(61,50,41,0.08);
   margin-bottom: 1.2rem; transition: all 0.3s ease; position: relative;
 }
-.programmi-item:hover { border-color: rgba(196,106,71,0.3); background: rgba(245,240,232,0.03); }
+.programmi-item:hover { border-color: rgba(196,106,71,0.3); background: rgba(61,50,41,0.02); }
 .programmi-item h4 {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-weight: 500; font-size: 1.2rem; color: var(--cream-light); margin-bottom: 0.5rem;
+  font-weight: 500; font-size: 1.2rem; color: var(--earth); margin-bottom: 0.5rem;
 }
-.programmi-item p { font-size: 0.85rem; color: var(--stone); line-height: 1.75; }
+.programmi-item p { font-size: 0.85rem; color: var(--earth-light); line-height: 1.75; }
 
 /* ---------- Eventi ---------- */
 .eventi { background: var(--cream-light); }
@@ -445,6 +608,7 @@ section { padding: 7rem 2rem; position: relative; }
 }
 .evento-card {
   display: grid; grid-template-columns: 200px 1fr;
+  align-items: center;
   background: var(--warm-white); overflow: hidden;
   border: 1px solid rgba(61,50,41,0.06);
   transition: all 0.4s ease;
@@ -454,8 +618,7 @@ section { padding: 7rem 2rem; position: relative; }
   box-shadow: 0 12px 40px rgba(61,50,41,0.08);
 }
 .evento-card img {
-  width: 100%; height: 100%; object-fit: cover;
-  min-height: 260px;
+  width: 100%; height: auto; object-fit: contain;
 }
 .evento-card .evento-body {
   padding: 2rem; display: flex; flex-direction: column; justify-content: center;
@@ -505,9 +668,9 @@ section { padding: 7rem 2rem; position: relative; }
 }
 .traguardo-item:first-child { border-top: 1px solid rgba(61,50,41,0.08); }
 .traguardo-num {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-weight: 300; font-size: 2.5rem; color: var(--terracotta-light);
-  line-height: 1; text-align: right; padding-top: 0.2rem;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--terracotta-light); margin-top: calc(0.5rem + 10px);
+  margin-left: 10px; flex-shrink: 0;
 }
 .traguardo-content h3 {
   font-family: 'Cormorant Garamond', Georgia, serif;
@@ -547,6 +710,10 @@ section { padding: 7rem 2rem; position: relative; }
 }
 .contatti-cta svg { width: 16px; height: 16px; transition: transform 0.3s ease; }
 .contatti-cta:hover svg { transform: translateX(4px); }
+.contatti-email {
+  margin-top: 1rem; font-family: 'Jost', sans-serif; font-size: 0.95rem;
+  color: var(--text-secondary); letter-spacing: 0.03em;
+}
 
 .contatti-info {
   margin-top: 3rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;
@@ -612,10 +779,10 @@ footer {
   .chi-siamo-hero { grid-template-columns: 1fr; }
   .chi-siamo-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .chi-siamo-values { grid-template-columns: 1fr; gap: 1rem; }
-  .attivita-grid { grid-template-columns: 1fr 1fr; }
+  .attivita-grid { grid-template-columns: 1fr; }
   .programmi-timeline { grid-template-columns: 1fr; gap: 2rem; }
   .traguardo-item { grid-template-columns: 50px 1fr; gap: 1.2rem; }
-  .traguardo-num { font-size: 2rem; }
+  .traguardo-num { width: 8px; height: 8px; }
   .traguardi-photo-row { grid-template-columns: 1fr; }
   .traguardi-photo-wrap { height: 240px; }
   .eventi-grid { grid-template-columns: 1fr; }
@@ -624,16 +791,18 @@ footer {
   nav.scrolled { padding: 0.7rem 1.5rem; }
   section { padding: 5rem 1.5rem; }
   .photo-strip { height: 200px; }
+  @keyframes photoScroll { 100% { transform: translateX(-50%); } }
 }
 @media (max-width: 600px) {
   .hero-title { font-size: 2.6rem; }
   .contatti-info { flex-direction: column; gap: 1.5rem; }
   .attivita-grid { grid-template-columns: 1fr; }
   .evento-card { grid-template-columns: 1fr; }
-  .evento-card img { min-height: 200px; }
+  .evento-card img { height: auto; }
   .chi-siamo-hero-images { grid-template-columns: 1fr 1fr; }
   .chi-siamo-hero-images .img-wrap:first-child { grid-column: 1 / -1; max-height: 250px; }
   .photo-strip { height: 160px; }
+  @keyframes photoScroll { 100% { transform: translateX(-50%); } }
 }
 </style>
 <!-- Structured Data -->
@@ -646,16 +815,16 @@ footer {
   "url": "https://versoagora.it",
   "logo": "https://versoagora.it/images/slide1_img0_6955769x5269522.jpg",
   "image": "https://versoagora.it/images/castri.jpeg",
-  "description": "Associazione di promozione sociale a Castrì di Lecce che valorizza ogni stagione della vita attraverso programmi culturali, civici e di socializzazione intergenerazionale.",
-  "email": "info@versolagora.it",
+  "description": "Associazione di promozione sociale a Castri di Lecce che valorizza ogni stagione della vita attraverso programmi culturali, civici e di socializzazione intergenerazionale.",
+  "email": "infoversoagora@gmail.com",
   "foundingDate": "2023",
   "areaServed": {
     "@type": "Place",
-    "name": "Castrì di Lecce, Puglia, Italia"
+    "name": "Castri di Lecce, Puglia, Italia"
   },
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Castrì di Lecce",
+    "addressLocality": "Castri di Lecce",
     "addressRegion": "Puglia",
     "addressCountry": "IT"
   },
@@ -675,10 +844,10 @@ footer {
     Verso l'Agorà
   </a>
   <ul class="nav-links">
+    <li><a href="#appuntamenti">News</a></li>
     <li><a href="#chi-siamo">Chi Siamo</a></li>
-    <li><a href="#attivita">Attività</a></li>
-    <li><a href="#programmi">Programmi</a></li>
-    <li><a href="#eventi">Eventi</a></li>
+    <li><a href="#attivita">Attività Svolte</a></li>
+    <li><a href="#programmi">Il Futuro</a></li>
     <li><a href="#traguardi">Traguardi</a></li>
     <li><a href="#contatti">Contatti</a></li>
   </ul>
@@ -690,10 +859,10 @@ footer {
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
+  <a href="#appuntamenti" onclick="closeMenu()">News</a>
   <a href="#chi-siamo" onclick="closeMenu()">Chi Siamo</a>
-  <a href="#attivita" onclick="closeMenu()">Attività</a>
-  <a href="#programmi" onclick="closeMenu()">Programmi</a>
-  <a href="#eventi" onclick="closeMenu()">Eventi</a>
+  <a href="#attivita" onclick="closeMenu()">Attività Svolte</a>
+  <a href="#programmi" onclick="closeMenu()">Il Futuro</a>
   <a href="#traguardi" onclick="closeMenu()">Traguardi</a>
   <a href="#contatti" onclick="closeMenu()">Contatti</a>
 </div>
@@ -708,13 +877,53 @@ footer {
     <h1 class="hero-title">Verso <em>l'Agorà</em></h1>
     <div class="hero-divider"></div>
     <p class="hero-tagline">Una comunità che cresce insieme, valorizzando ogni stagione della vita nel cuore del Salento</p>
-    <div class="hero-badge">Castrì di Lecce — Registrata al RUNTS il 30 Settembre 2023</div>
+    <div class="hero-badge">Castri di Lecce — Registrata al RUNTS il 30 Settembre 2023</div>
+    <div class="hero-email"><a href="mailto:infoversoagora@gmail.com">infoversoagora@gmail.com</a></div>
   </div>
   <div class="hero-scroll">
     <span>Scopri</span>
     <div class="hero-scroll-line"></div>
   </div>
 </section>
+
+<!-- Prossimi Appuntamenti -->
+<section class="prossimi-appuntamenti" id="appuntamenti">
+  <div class="section-container">
+    <div style="text-align:center;margin-bottom:4rem;" class="reveal">
+      <p class="section-label">
+        <span class="pulse-dot"></span>Prossimi Appuntamenti
+      </p>
+      <h2 class="section-title">In <em>programma</em></h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item reveal reveal-delay-1">
+        <div class="timeline-date">
+          <span class="day">24</span>
+          <span class="month-year">Aprile 2026</span>
+        </div>
+        <div class="timeline-node"></div>
+        <div class="timeline-content">
+          <span class="timeline-tag pubblico">Evento Pubblico</span>
+          <h3>Il miracolo dell'acqua nel Salento</h3>
+          <p>Incontro con il Prof. Paolo Sansò, geologo dell'Università del Salento.</p>
+          <div class="timeline-meta">
+            <span>
+              <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1"/><path d="M8 4.5V8.5L10.5 10" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
+              Ore 18:30
+            </span>
+            <span>
+              <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6C3.5 9.5 8 14.5 8 14.5S12.5 9.5 12.5 6C12.5 3.5 10.5 1.5 8 1.5Z" stroke="currentColor" stroke-width="1"/><circle cx="8" cy="6" r="1.5" stroke="currentColor" stroke-width="1"/></svg>
+              Sala "Le Tabacchine", Castri di Lecce
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="max-width:1100px;margin:0 auto;border-top:1px solid rgba(61,50,41,0.08);"></div>
 
 <!-- Chi Siamo -->
 <section class="chi-siamo" id="chi-siamo">
@@ -724,7 +933,7 @@ footer {
       <div class="chi-siamo-hero-text">
         <p class="section-label">Chi Siamo</p>
         <h2 class="section-title">Una nuova visione<br>della <em>comunità</em></h2>
-        <p>L'Associazione "Verso l'Agorà" nasce a Castrì di Lecce con un progetto ambizioso: trasformare e adattare la comunità all'invecchiamento della popolazione, rendendo gli anziani protagonisti attivi della vita sociale e culturale del territorio salentino.</p>
+        <p>L'Associazione "Verso l'Agorà" nasce a Castri di Lecce con un progetto ambizioso: trasformare e adattare la comunità all'invecchiamento della popolazione, rendendo gli anziani protagonisti attivi della vita sociale e culturale del territorio salentino.</p>
         <p style="margin-top:1rem;">Attraverso programmi di crescita culturale, civica e di socializzazione intergenerazionale, valorizziamo le competenze, le esperienze e le attitudini di ogni membro della nostra comunità.</p>
       </div>
       <div class="chi-siamo-hero-images">
@@ -784,13 +993,47 @@ footer {
   </div>
 </section>
 
+<!-- Direttivo -->
+<section class="direttivo">
+  <div class="section-container">
+    <div class="reveal" style="text-align:center;">
+      <p class="section-label">Team</p>
+      <div class="direttivo-grid">
+        <div class="direttivo-member reveal reveal-delay-1">
+          <h3>Gianfranco Capone</h3>
+          <span>Presidente</span>
+        </div>
+        <div class="direttivo-member reveal reveal-delay-2">
+          <h3>Ada Buttazzo</h3>
+          <span>Vice Presidente</span>
+        </div>
+        <div class="direttivo-member reveal reveal-delay-3">
+          <h3>Anna Maria Alligri</h3>
+          <span>Segretaria</span>
+        </div>
+        <div class="direttivo-member reveal reveal-delay-4">
+          <h3>Anna Maria Mazzeo</h3>
+          <span>Tesoriera</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Photo strip -->
 <div class="photo-strip">
-  <img src="images/slide3_group0_img1.jpg" alt="Incontro culturale" loading="lazy">
-  <img src="images/slide5_img3_2571751x1928813.jpg" alt="Forest Therapy" loading="lazy">
-  <img src="images/slide7_img2_5220855x3915641.jpg" alt="Incontro nella sala a volta" loading="lazy">
-  <img src="images/slide5_img5_3429000x1928813.jpg" alt="Laboratorio creativo" loading="lazy">
-  <img src="images/slide5_img6_2993475x3988186.jpg" alt="Visita al museo" loading="lazy">
+  <div class="photo-strip-track">
+    <img src="images/slide3_group0_img1.jpg" alt="Incontro culturale" loading="lazy">
+    <img src="images/slide5_img3_2571751x1928813.jpg" alt="Forest Therapy" loading="lazy">
+    <img src="images/slide7_img2_5220855x3915641.jpg" alt="Incontro nella sala a volta" loading="lazy">
+    <img src="images/slide5_img5_3429000x1928813.jpg" alt="Laboratorio creativo" loading="lazy">
+    <img src="images/slide5_img6_2993475x3988186.jpg" alt="Visita al museo" loading="lazy">
+    <img src="images/slide3_group0_img1.jpg" alt="Incontro culturale" loading="lazy" aria-hidden="true">
+    <img src="images/slide5_img3_2571751x1928813.jpg" alt="Forest Therapy" loading="lazy" aria-hidden="true">
+    <img src="images/slide7_img2_5220855x3915641.jpg" alt="Incontro nella sala a volta" loading="lazy" aria-hidden="true">
+    <img src="images/slide5_img5_3429000x1928813.jpg" alt="Laboratorio creativo" loading="lazy" aria-hidden="true">
+    <img src="images/slide5_img6_2993475x3988186.jpg" alt="Visita al museo" loading="lazy" aria-hidden="true">
+  </div>
 </div>
 
 <!-- Attività -->
@@ -802,67 +1045,162 @@ footer {
     </div>
     <p class="attivita-intro reveal reveal-delay-1">Un ricco programma di attività culturali, scientifiche e di benessere pensate per stimolare la curiosità, la socializzazione e il benessere dei nostri soci.</p>
 
-    <div class="attivita-grid">
-      <div class="attivita-card reveal reveal-delay-1">
-        <div class="card-img-wrap">
-          <img src="images/slide3_group0_img1.jpg" alt="Incontro sui Messapi" class="card-img" loading="lazy">
+    <div class="attivita-group reveal reveal-delay-1">
+      <h3 class="attivita-group-title">Percorso Storia e Conoscenza del Territorio</h3>
+      <div class="attivita-grid">
+        <div class="attivita-card">
+          <div class="card-img-wrap">
+            <img src="images/slide3_group0_img4.jpg" alt="Incontro sui Messapi" class="card-img" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>I Messapi</h3>
+            <p>Incontri di archeologia e visite guidate agli scavi e al museo di Castro, alla scoperta della civiltà messapica.</p>
+            <span class="card-curator">A cura dell'arch. Prof. F. D'Andria e C. Notaro</span>
+          </div>
         </div>
-        <div class="card-body">
-          <h3>I Messapi</h3>
-          <p>Incontri di archeologia e visite guidate agli scavi e al museo di Castro, alla scoperta della civiltà messapica.</p>
-          <span class="card-curator">A cura dell'arch. Prof. F. D'Andria e C. Notaro</span>
-        </div>
-      </div>
-
-      <div class="attivita-card reveal reveal-delay-2">
-        <div class="card-img-wrap">
-          <img src="images/slide5_img1_2070207x2760276.jpg" alt="Incontro di astrofisica" class="card-img" loading="lazy">
-        </div>
-        <div class="card-body">
-          <h3>Fisica e Astrofisica</h3>
-          <p>Un viaggio affascinante attraverso le leggi dell'universo, dalle particelle alle galassie.</p>
-          <span class="card-curator">A cura del Dott. Stefano Moramarco</span>
-        </div>
-      </div>
-
-      <div class="attivita-card reveal reveal-delay-3">
-        <div class="card-img-wrap">
-          <img src="images/slide4_img1_5855468x3292099.jpg" alt="Incontro di informatica" class="card-img" loading="lazy">
-        </div>
-        <div class="card-body">
-          <h3>Informatica</h3>
-          <p>Percorsi di familiarizzazione con il mondo digitale, per restare connessi e autonomi.</p>
-          <span class="card-curator">A cura dell'Ing. Davide Cammarota</span>
+        <div class="attivita-card">
+          <div class="card-img-wrap">
+            <img src="images/slide5_img6_2993475x3988186.jpg" alt="Visita al museo" class="card-img" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Visite ai Musei</h3>
+            <p>Esperienze culturali alla scoperta del patrimonio artistico e storico del territorio pugliese.</p>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="attivita-card reveal reveal-delay-2">
-        <div class="card-img-wrap">
-          <img src="images/slide3_group0_img4.jpg" alt="Sessione di Mindfulness" class="card-img" loading="lazy">
+    <div class="attivita-group reveal reveal-delay-2">
+      <h3 class="attivita-group-title">Percorso le Meraviglie della Scienza</h3>
+      <div class="attivita-grid">
+        <div class="attivita-card">
+          <div class="card-img-wrap">
+            <img src="images/slide4_img1_5855468x3292099.jpg" alt="Incontro di astrofisica" class="card-img" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Fisica e Astrofisica</h3>
+            <p>Un viaggio affascinante attraverso le leggi dell'universo, dalle particelle alle galassie.</p>
+            <span class="card-curator">A cura del Dott. Stefano Moramarco</span>
+          </div>
         </div>
-        <div class="card-body">
-          <h3>Mindfulness</h3>
-          <p>Un corso dedicato alla consapevolezza e al benessere interiore, per ritrovare equilibrio e serenità.</p>
+        <div class="attivita-card">
+          <div class="card-img-wrap">
+            <img src="images/informatica.jpeg" alt="Incontro di informatica" class="card-img" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Informatica</h3>
+            <p>Percorsi di familiarizzazione con il mondo digitale, per restare connessi e autonomi.</p>
+            <span class="card-curator">A cura dell'Ing. Davide Cammarota</span>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="attivita-card reveal reveal-delay-3">
-        <div class="card-img-wrap">
-          <img src="images/slide5_img3_2571751x1928813.jpg" alt="Forest Therapy nel Salento" class="card-img" loading="lazy">
+    <div class="attivita-group reveal reveal-delay-3">
+      <h3 class="attivita-group-title">Percorso Salute e Benessere</h3>
+      <div class="attivita-grid">
+        <div class="attivita-card">
+          <div class="card-img-wrap">
+            <img src="images/slide5_img3_2571751x1928813.jpg" alt="Forest Therapy nel Salento" class="card-img" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Forest Therapy</h3>
+            <p>Incontri conoscitivi sulla terapia forestale, immergendosi nella natura salentina.</p>
+          </div>
         </div>
-        <div class="card-body">
-          <h3>Forest Therapy</h3>
-          <p>Incontri conoscitivi sulla terapia forestale, immergendosi nella natura salentina.</p>
+        <div class="attivita-card">
+          <div class="card-img-wrap">
+            <img src="images/slide5_img1_2070207x2760276.jpg" alt="Sessione di Mindfulness" class="card-img" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Mindfulness</h3>
+            <p>Un corso dedicato alla consapevolezza e al benessere interiore, per ritrovare equilibrio e serenità.</p>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="attivita-card reveal reveal-delay-4">
-        <div class="card-img-wrap">
-          <img src="images/slide5_img6_2993475x3988186.jpg" alt="Visita al museo" class="card-img" loading="lazy">
+<!-- Eventi Pubblici -->
+<section class="eventi" id="eventi">
+  <div class="section-container">
+    <div class="reveal">
+      <p class="section-label">Eventi Pubblici</p>
+      <h2 class="section-title">Aperti alla <em>cittadinanza</em></h2>
+    </div>
+    <div class="eventi-grid">
+      <div class="evento-card reveal reveal-delay-1">
+        <img src="images/evento_1.jpeg" alt="Locandina Sorvegliate Garibaldi" loading="lazy">
+        <div class="evento-body">
+          <h3>Sorvegliate Garibaldi</h3>
+          <p>Presentazione del libro di Aldo Quarta (Edizioni Milella, 2024). Durante la serata si parlerà del concittadino garibaldino Vincenzo Martelli, con musiche a cura di Maurilio Gigante. In collaborazione con Pro Loco Castri di Lecce e Gigante Garage Lab.</p>
+          <span class="evento-meta">Aldo Quarta — Sala Anna Rita Luceri, 25 Ottobre 2024</span>
         </div>
-        <div class="card-body">
-          <h3>Visite ai Musei</h3>
-          <p>Esperienze culturali alla scoperta del patrimonio artistico e storico del territorio pugliese.</p>
+      </div>
+      <div class="evento-card reveal reveal-delay-2">
+        <img src="images/slide6_img1_2965330x4194986.jpg" alt="Locandina Scene da un matrimonio a Castri" loading="lazy">
+        <div class="evento-body">
+          <h3>Scene da un Matrimonio a Castri</h3>
+          <p>Un viaggio nella storia del paese seguendo le tracce di uno dei momenti felici della storia personale e collettiva. In collaborazione con "Gigante Garage Lab" e il patrocinio del Comune di Castri di Lecce.</p>
+          <span class="evento-meta">Prof. Carlo Alberto Augeri — Università del Salento</span>
+        </div>
+      </div>
+      <div class="evento-card reveal reveal-delay-3">
+        <img src="images/slide7_img1_3833069x6760521.jpg" alt="Locandina Olio e Salento" loading="lazy">
+        <div class="evento-body">
+          <h3>Olio e Salento</h3>
+          <p>Dai trappeti ipogei agli opifici moderni, dal lampante all'eccellenza. Serata dedicata alla produzione simbolo della cultura e del paesaggio urbano e rurale salentino, con degustazione di olio.</p>
+          <span class="evento-meta">Arch. Prof. Antonio Monte — Dott. Gianni Lezzi</span>
+        </div>
+      </div>
+      <div class="evento-card reveal reveal-delay-4">
+        <img src="images/evento_4.jpeg" alt="Locandina Quel fischio che ho nella testa" loading="lazy">
+        <div class="evento-body">
+          <h3>Quel fischio che ho nella testa</h3>
+          <p>Incontro con il Dr. Silvano Vitale, Specialista in Otorinolaringoiatria, e presentazione del suo romanzo "Cronache di un'amicizia non richiesta", intervistato dalla Dott.ssa Teresa Ciulli. Con il patrocinio del Comune di Castri di Lecce.</p>
+          <span class="evento-meta">Dr. Silvano Vitale — Laboratorio Teatrale "A. Luceri", 13 Marzo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Traguardi -->
+<section class="traguardi" id="traguardi">
+  <div class="section-container">
+    <div class="reveal">
+      <p class="section-label">I Nostri Traguardi</p>
+      <h2 class="section-title">Passi <em>concreti</em></h2>
+    </div>
+
+    <div class="traguardi-list">
+      <div class="traguardo-item reveal reveal-delay-1">
+        <div class="traguardo-num"></div>
+        <div class="traguardo-content">
+          <h3>Protocollo d'Intesa Istituzionale</h3>
+          <p>Sottoscrizione di un protocollo d'intesa tra l'Amministrazione Comunale e l'Associazione "Verso L'Agorà APS", sancendo una collaborazione formale per il benessere della comunità.</p>
+        </div>
+      </div>
+      <div class="traguardo-item reveal reveal-delay-2">
+        <div class="traguardo-num"></div>
+        <div class="traguardo-content">
+          <h3>Collaborazione con l'Università del Salento</h3>
+          <p>Progettazione e somministrazione, in collaborazione con l'Università del Salento, di un questionario conoscitivo dei bisogni e della condizione psicologica degli anziani della comunità.</p>
+        </div>
+      </div>
+      <div class="traguardo-item reveal reveal-delay-3">
+        <div class="traguardo-num"></div>
+        <div class="traguardo-content">
+          <h3>Programmazione Culturale</h3>
+          <p>Avvio di un ricco calendario di incontri culturali, scientifici e di benessere destinati ai soci, con il coinvolgimento di esperti e professionisti del territorio.</p>
+        </div>
+      </div>
+      <div class="traguardo-item reveal reveal-delay-4">
+        <div class="traguardo-num"></div>
+        <div class="traguardo-content">
+          <h3>Eventi Pubblici</h3>
+          <p>Organizzazione di eventi aperti alla cittadinanza per sensibilizzare la comunità sulle tematiche dell'invecchiamento attivo e della solidarietà intergenerazionale.</p>
         </div>
       </div>
     </div>
@@ -873,8 +1211,7 @@ footer {
 <section class="programmi" id="programmi">
   <div class="section-container">
     <div class="reveal">
-      <p class="section-label">I Nostri Programmi</p>
-      <h2 class="section-title">Costruire il <em>futuro</em><br>della comunità</h2>
+      <h2 class="section-title">Costruire con la comunità il <em>futuro</em></h2>
     </div>
     <div class="programmi-timeline">
       <div class="programmi-col reveal reveal-delay-1">
@@ -903,90 +1240,6 @@ footer {
   </div>
 </section>
 
-<div class="section-branch on-dark">
-  <svg viewBox="0 0 120 40" fill="none"><path d="M10 20 Q30 15 60 20 Q90 25 110 20" stroke="currentColor" stroke-width="1" fill="none"/><ellipse cx="35" cy="16" rx="8" ry="4.5" transform="rotate(-15 35 16)" fill="currentColor" opacity="0.5"/><ellipse cx="60" cy="20" rx="7" ry="4" fill="currentColor" opacity="0.4"/><ellipse cx="85" cy="23" rx="8" ry="4.5" transform="rotate(15 85 23)" fill="currentColor" opacity="0.5"/><circle cx="45" cy="18" r="2.5" fill="currentColor" opacity="0.35"/><circle cx="75" cy="22" r="2.5" fill="currentColor" opacity="0.35"/></svg>
-</div>
-
-<!-- Eventi Pubblici -->
-<section class="eventi" id="eventi">
-  <div class="section-container">
-    <div class="reveal">
-      <p class="section-label">Eventi Pubblici</p>
-      <h2 class="section-title">Aperti alla <em>cittadinanza</em></h2>
-    </div>
-    <div class="eventi-grid">
-      <div class="evento-card reveal reveal-delay-1">
-        <img src="images/slide6_img1_2965330x4194986.jpg" alt="Locandina Scene da un matrimonio a Castrì" loading="lazy">
-        <div class="evento-body">
-          <h3>Scene da un Matrimonio a Castrì</h3>
-          <p>Un viaggio nella storia del paese seguendo le tracce di uno dei momenti felici della storia personale e collettiva. In collaborazione con "Gigante Garage Lab" e il patrocinio del Comune di Castrì di Lecce.</p>
-          <span class="evento-meta">Prof. Carlo Alberto Augeri — Università del Salento</span>
-        </div>
-      </div>
-      <div class="evento-card reveal reveal-delay-2">
-        <img src="images/slide7_img1_3833069x6760521.jpg" alt="Locandina Olio e Salento" loading="lazy">
-        <div class="evento-body">
-          <h3>Olio e Salento</h3>
-          <p>Dai trappeti ipogei agli opifici moderni, dal lampante all'eccellenza. Serata dedicata alla produzione simbolo della cultura e del paesaggio urbano e rurale salentino, con degustazione di olio.</p>
-          <span class="evento-meta">Arch. Prof. Antonio Monte — Dott. Gianni Lezzi</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Traguardi -->
-<section class="traguardi" id="traguardi">
-  <div class="section-container">
-    <div class="reveal">
-      <p class="section-label">I Nostri Traguardi</p>
-      <h2 class="section-title">Passi <em>concreti</em></h2>
-    </div>
-
-    <div class="traguardi-photo-row reveal reveal-delay-1">
-      <div class="traguardi-photo-wrap">
-        <img src="images/slide6_img4_3833436x5111247.jpg" alt="Evento pubblico nell'auditorium" loading="lazy">
-        <div class="photo-caption">Evento pubblico — Auditorium</div>
-      </div>
-      <div class="traguardi-photo-wrap">
-        <img src="images/slide7_img2_5220855x3915641.jpg" alt="Incontro nella sala a volta" loading="lazy">
-        <div class="photo-caption">Incontro culturale — Sala a volta</div>
-      </div>
-    </div>
-
-    <div class="traguardi-list">
-      <div class="traguardo-item reveal reveal-delay-1">
-        <div class="traguardo-num">01</div>
-        <div class="traguardo-content">
-          <h3>Protocollo d'Intesa Istituzionale</h3>
-          <p>Sottoscrizione di un protocollo d'intesa tra l'Amministrazione Comunale e l'Associazione "Verso L'Agorà APS", sancendo una collaborazione formale per il benessere della comunità.</p>
-        </div>
-      </div>
-      <div class="traguardo-item reveal reveal-delay-2">
-        <div class="traguardo-num">02</div>
-        <div class="traguardo-content">
-          <h3>Collaborazione con l'Università del Salento</h3>
-          <p>Progettazione e somministrazione, in collaborazione con l'Università del Salento, di un questionario conoscitivo dei bisogni e della condizione psicologica degli anziani della comunità.</p>
-        </div>
-      </div>
-      <div class="traguardo-item reveal reveal-delay-3">
-        <div class="traguardo-num">03</div>
-        <div class="traguardo-content">
-          <h3>Programmazione Culturale</h3>
-          <p>Avvio di un ricco calendario di incontri culturali, scientifici e di benessere destinati ai soci, con il coinvolgimento di esperti e professionisti del territorio.</p>
-        </div>
-      </div>
-      <div class="traguardo-item reveal reveal-delay-4">
-        <div class="traguardo-num">04</div>
-        <div class="traguardo-content">
-          <h3>Eventi Pubblici</h3>
-          <p>Organizzazione di eventi aperti alla cittadinanza per sensibilizzare la comunità sulle tematiche dell'invecchiamento attivo e della solidarietà intergenerazionale.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Contatti -->
 <section class="contatti" id="contatti">
   <div class="contatti-bg"></div>
@@ -999,14 +1252,15 @@ footer {
       <p class="contatti-text reveal reveal-delay-1">
         L'Agorà è aperta a tutti coloro che condividono la nostra visione di una comunità solidale e inclusiva. Contattaci per scoprire come partecipare alle nostre attività o sostenere i nostri progetti.
       </p>
-      <a href="mailto:info@versolagora.it" class="contatti-cta reveal reveal-delay-2">
+      <a href="mailto:infoversoagora@gmail.com" class="contatti-cta reveal reveal-delay-2">
         Scrivici
         <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
+      <p class="contatti-email reveal reveal-delay-2">infoversoagora@gmail.com</p>
       <div class="contatti-info reveal reveal-delay-3">
         <div class="contatti-info-item">
           <span class="info-label">Sede</span>
-          <span class="info-value">Castrì di Lecce, Puglia</span>
+          <span class="info-value">Castri di Lecce, Puglia</span>
         </div>
         <div class="contatti-info-item">
           <span class="info-label">Registrazione</span>
