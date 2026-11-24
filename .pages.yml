@@ -1,0 +1,142 @@
+# Configurazione di Pages CMS (https://pagescms.org) per versoagora.it.
+# Definisce i moduli con cui si modificano i contenuti del sito senza toccare il codice:
+# ogni salvataggio diventa un commit sui file della cartella data/, che index.html legge.
+
+media:
+  input: images
+  output: images
+  categories: [image]
+  rename: safe
+
+content:
+  - name: eventi
+    label: Eventi
+    type: file
+    path: data/eventi.json
+    format: json
+    fields:
+      - name: eventi
+        label: Eventi
+        description: >-
+          Per aggiungere un evento premi "Add an item" in fondo alla lista e compila la scheda.
+          L'ordine nella lista non conta: il sito ordina gli eventi per data. Un evento con una data
+          futura compare in alto nella pagina, sotto "In programma", e ne esce da solo il giorno dopo.
+          Gli eventi pubblici restano sempre visibili nella sezione "Eventi Pubblici".
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titolo} — {data}"
+        fields:
+          - name: titolo
+            label: Titolo
+            type: string
+            required: true
+          - name: tipo
+            label: Tipo di evento
+            description: Gli eventi riservati ai soci compaiono solo in "In programma", non tra gli eventi pubblici.
+            type: select
+            default: pubblico
+            options:
+              values:
+                - value: pubblico
+                  label: Evento pubblico (aperto a tutti)
+                - value: soci
+                  label: Riservato ai soci
+          - name: data
+            label: Data
+            description: Il giorno dell'evento. Senza data l'evento non compare in "In programma".
+            type: date
+          - name: ora
+            label: Orario
+            description: 'Facoltativo. Scrivilo così: 18:00'
+            type: string
+            pattern:
+              regex: '^$|^([01]?[0-9]|2[0-3]):[0-5][0-9]$'
+              message: 'Scrivi l''orario così: 18:00'
+          - name: luogo
+            label: Luogo
+            description: 'Per esempio: Sala "Le Tabacchine", Castri di Lecce'
+            type: string
+          - name: relatore
+            label: Relatore o ospite
+            description: Facoltativo. Il nome di chi tiene l'incontro.
+            type: string
+          - name: descrizione
+            label: Descrizione
+            description: Due o tre frasi che presentano l'evento.
+            type: text
+          - name: locandina
+            label: Locandina
+            description: Facoltativa. L'immagine della locandina (meglio se sotto 1 MB).
+            type: image
+
+  - name: attivita
+    label: Attività svolte
+    type: file
+    path: data/attivita.json
+    format: json
+    fields:
+      - name: percorsi
+        label: Percorsi
+        description: I gruppi in cui sono raccolte le attività nella sezione "Attività Svolte".
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titolo}"
+        fields:
+          - name: titolo
+            label: Nome del percorso
+            type: string
+            required: true
+          - name: attivita
+            label: Attività
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{titolo}"
+            fields:
+              - name: titolo
+                label: Titolo
+                type: string
+                required: true
+              - name: descrizione
+                label: Descrizione
+                type: text
+              - name: immagine
+                label: Fotografia
+                type: image
+              - name: testo_alternativo
+                label: Cosa mostra la fotografia
+                description: Facoltativo. Una breve frase per chi non può vedere l'immagine.
+                type: string
+              - name: nota
+                label: Riga finale
+                description: 'Facoltativa. Per esempio: A cura del Dott. Mario Rossi, oppure la data dell''uscita.'
+                type: string
+
+  - name: foto
+    label: Striscia di fotografie
+    type: file
+    path: data/foto.json
+    format: json
+    fields:
+      - name: foto
+        label: Fotografie
+        description: Le fotografie che scorrono a metà pagina, nell'ordine di questa lista.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{descrizione}"
+        fields:
+          - name: immagine
+            label: Fotografia
+            type: image
+            required: true
+          - name: descrizione
+            label: Cosa mostra la fotografia
+            description: Una breve frase per chi non può vedere l'immagine.
+            type: string

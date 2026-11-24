@@ -1,0 +1,61 @@
+{
+  "percorsi": [
+    {
+      "titolo": "Percorso Storia e Conoscenza del Territorio",
+      "attivita": [
+        {
+          "titolo": "I Messapi",
+          "descrizione": "Incontri di archeologia e visite guidate agli scavi e al museo di Castro, alla scoperta della civiltà messapica.",
+          "immagine": "images/slide3_group0_img4.jpg",
+          "testo_alternativo": "Incontro sui Messapi",
+          "nota": "A cura dell'arch. Prof. F. D'Andria e C. Notaro"
+        },
+        {
+          "titolo": "Museo Diffuso di Cavallino",
+          "descrizione": "Visita guidata al sito archeologico e al Museo Didattico Archeologico, alla scoperta dell'antica città messapica e del suo territorio.",
+          "immagine": "images/museo_cavallino_gruppo.jpeg",
+          "testo_alternativo": "Soci dell'Associazione in visita al Museo Diffuso di Cavallino",
+          "nota": "9 Maggio 2026 — uscita dei soci"
+        }
+      ]
+    },
+    {
+      "titolo": "Percorso le Meraviglie della Scienza",
+      "attivita": [
+        {
+          "titolo": "Fisica e Astrofisica",
+          "descrizione": "Un viaggio affascinante attraverso le leggi dell'universo, dalle particelle alle galassie.",
+          "immagine": "images/slide4_img1_5855468x3292099.jpg",
+          "testo_alternativo": "Incontro di astrofisica",
+          "nota": "A cura del Dott. Stefano Moramarco"
+        },
+        {
+          "titolo": "Informatica",
+          "descrizione": "Percorsi di familiarizzazione con il mondo digitale, per restare connessi e autonomi.",
+          "immagine": "images/informatica.jpeg",
+          "testo_alternativo": "Incontro di informatica",
+          "nota": "A cura dell'Ing. Davide Cammarota"
+        }
+      ]
+    },
+    {
+      "titolo": "Percorso Salute e Benessere",
+      "attivita": [
+        {
+          "titolo": "Forest Therapy",
+          "descrizione": "Incontri conoscitivi sulla terapia forestale, immergendosi nella natura salentina.",
+          "immagine": "images/slide5_img3_2571751x1928813.jpg",
+          "testo_alternativo": "Forest Therapy nel Salento",
+          "nota": ""
+        },
+        {
+          "titolo": "Mindfulness",
+          "descrizione": "Un corso dedicato alla consapevolezza e al benessere interiore, per ritrovare equilibrio e serenità.",
+          "immagine": "images/slide5_img1_2070207x2760276.jpg",
+          "testo_alternativo": "Sessione di Mindfulness",
+          "nota": ""
+        }
+      ]
+    }
+  ]
+}
