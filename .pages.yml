@@ -17,11 +17,6 @@ content:
     fields:
       - name: eventi
         label: Eventi
-        description: >-
-          Per aggiungere un evento premi "Add an item" in fondo alla lista e compila la scheda.
-          L'ordine nella lista non conta: il sito ordina gli eventi per data. Un evento con una data
-          futura compare in alto nella pagina, sotto "In programma", e ne esce da solo il giorno dopo.
-          Gli eventi pubblici restano sempre visibili nella sezione "Eventi Pubblici".
         type: object
         list:
           collapsible:
@@ -47,6 +42,8 @@ content:
             label: Data
             description: Il giorno dell'evento. Senza data l'evento non compare in "In programma".
             type: date
+            # Senza questo, l'editor riempie con la data di oggi gli eventi che non ne hanno una
+            default: ""
           - name: ora
             label: Orario
             description: 'Facoltativo. Scrivilo così: 18:00'
@@ -79,7 +76,6 @@ content:
     fields:
       - name: percorsi
         label: Percorsi
-        description: I gruppi in cui sono raccolte le attività nella sezione "Attività Svolte".
         type: object
         list:
           collapsible:
@@ -125,7 +121,6 @@ content:
     fields:
       - name: foto
         label: Fotografie
-        description: Le fotografie che scorrono a metà pagina, nell'ordine di questa lista.
         type: object
         list:
           collapsible:
