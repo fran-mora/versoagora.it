@@ -59,6 +59,15 @@
       "luogo": "Sala \"Le Tabacchine\", Castrì di Lecce",
       "relatore": "Gen. C. (in congedo) Alessandro Morello",
       "locandina": "images/locandina-fado-morello.png"
+    },
+    {
+      "titolo": "incontro con Dott.ssa Chiara Martis ",
+      "tipo": "soci",
+      "data": "2026-11-27",
+      "ora": "19:00",
+      "luogo": "Sede sociale",
+      "relatore": "Dott.ssa Chiara Martis",
+      "descrizione": "Risultanze indagine statistica (questionario)"
     }
   ]
 }
