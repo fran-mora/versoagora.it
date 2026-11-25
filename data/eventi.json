@@ -50,6 +50,15 @@
       "relatore": "Dr. Silvano Vitale",
       "descrizione": "Incontro con il Dr. Silvano Vitale, Specialista in Otorinolaringoiatria, e presentazione del suo romanzo \"Cronache di un'amicizia non richiesta\", intervistato dalla Dott.ssa Teresa Ciulli. Con il patrocinio del Comune di Castri di Lecce.",
       "locandina": "images/evento_4.jpeg"
+    },
+    {
+      "titolo": "Il Fado - Nascita ed evoluzione di un genere musicale identitario",
+      "tipo": "pubblico",
+      "data": "2026-11-28",
+      "ora": "18:00",
+      "luogo": "Sala \"Le Tabacchine\", Castrì di Lecce",
+      "relatore": "Gen. C. (in congedo) Alessandro Morello",
+      "locandina": "images/locandina-fado-morello.png"
     }
   ]
 }
