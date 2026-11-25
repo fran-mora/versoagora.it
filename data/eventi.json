@@ -24,7 +24,6 @@
       "titolo": "Sorvegliate Garibaldi",
       "tipo": "pubblico",
       "data": "2024-10-25",
-      "ora": "",
       "luogo": "Sala Anna Rita Luceri",
       "relatore": "Aldo Quarta",
       "descrizione": "Presentazione del libro di Aldo Quarta (Edizioni Milella, 2024). Durante la serata si parlerà del concittadino garibaldino Vincenzo Martelli, con musiche a cura di Maurilio Gigante. In collaborazione con Pro Loco Castri di Lecce e Gigante Garage Lab.",
@@ -33,9 +32,6 @@
     {
       "titolo": "Scene da un Matrimonio a Castri",
       "tipo": "pubblico",
-      "data": "",
-      "ora": "",
-      "luogo": "",
       "relatore": "Prof. Carlo Alberto Augeri — Università del Salento",
       "descrizione": "Un viaggio nella storia del paese seguendo le tracce di uno dei momenti felici della storia personale e collettiva. In collaborazione con \"Gigante Garage Lab\" e il patrocinio del Comune di Castri di Lecce.",
       "locandina": "images/slide6_img1_2965330x4194986.jpg"
@@ -43,9 +39,6 @@
     {
       "titolo": "Olio e Salento",
       "tipo": "pubblico",
-      "data": "",
-      "ora": "",
-      "luogo": "",
       "relatore": "Arch. Prof. Antonio Monte — Dott. Gianni Lezzi",
       "descrizione": "Dai trappeti ipogei agli opifici moderni, dal lampante all'eccellenza. Serata dedicata alla produzione simbolo della cultura e del paesaggio urbano e rurale salentino, con degustazione di olio.",
       "locandina": "images/slide7_img1_3833069x6760521.jpg"
@@ -53,12 +46,14 @@
     {
       "titolo": "Quel fischio che ho nella testa",
       "tipo": "pubblico",
-      "data": "",
-      "ora": "",
       "luogo": "Laboratorio Teatrale \"A. Luceri\", 13 Marzo",
       "relatore": "Dr. Silvano Vitale",
       "descrizione": "Incontro con il Dr. Silvano Vitale, Specialista in Otorinolaringoiatria, e presentazione del suo romanzo \"Cronache di un'amicizia non richiesta\", intervistato dalla Dott.ssa Teresa Ciulli. Con il patrocinio del Comune di Castri di Lecce.",
       "locandina": "images/evento_4.jpeg"
+    },
+    {
+      "titolo": "Francesco (test)",
+      "tipo": "pubblico"
     }
   ]
 }
